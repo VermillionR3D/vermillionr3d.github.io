@@ -70,6 +70,8 @@ a {
   border-style: solid;
   border-width: 1px;
   border-radius: 0.3rem;
+  background-image: url("https://static-cdn.jtvnw.net/jtv_user_pictures/e63d86d2-6a07-49cc-a102-c63358b5dcf7-profile_banner-480.png");
+  background-size: 100% auto;
   transition: color 0.2s, background-color 0.2s, border-color 0.2s;
 
   &:hover {
