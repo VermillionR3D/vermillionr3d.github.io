@@ -2,5 +2,5 @@ remote_theme: pages-themes/cayman@v0.2.0
 plugins:
 - jekyll-remote-theme # add this line to the plugins list if you already have one
 title: Froglodyte VRC Hangout Photos
-description: Welcome! Simply click the photos to be directed to each gallery!
+description: Welcome! Select a year below to view the galleries!
 show_downloads: false
