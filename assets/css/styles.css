@@ -134,6 +134,7 @@ header .title {
 	transition: opacity 0.18s;
 	opacity: 0;
 	background-color: var(--link);
+	border-radius: 6px;
 }
 
 .gallery-frame a:hover .image::before, .card-gallery a:hover .image::before {
