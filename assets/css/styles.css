@@ -136,7 +136,6 @@ header .title {
 	background-color: var(--link);
 }
 
-
 .gallery-frame a:hover .image::before, .card-gallery a:hover .image::before {
 	opacity: 0.3;
 }
@@ -145,6 +144,10 @@ header .title {
 	width: 100%;
 	object-fit: contain;
 	height: auto;
+}
+
+.image img {
+	border-radius: 6px;
 }
 
 
