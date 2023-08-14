@@ -1,22 +1,159 @@
-<style>
-div.gallery {
-  margin: 5px;
-  border: 1px solid #ccc;
-  float: left;
-  width: 180px;
+/* General settings */
+
+@import url('https://fonts.googleapis.com/css2?family=Crimson+Text:ital,wght@0,600;0,700;1,400;1,600;1,700&family=Open+Sans:ital,wght@0,400;0,600;0,700;1,400&display=swap');
+
+body {
+	font-family: "Open Sans";
+	margin: 0;
 }
 
-div.gallery:hover {
-  border: 1px solid #777;
+h1,h2,h3,h4,h5,h6 {
+	margin: 0;
 }
 
-div.gallery img {
-  width: 100%;
-  height: auto;
+a {
+	text-decoration: none;
+	color: #1bb78b;
+	transition: color 0.15s;
+}
+
+a:hover {
+	color: #12604a;
+}
+
+/* Website header */
+header {
+	position: relative;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+}
+
+header img {
+	width: 100%;
+	max-height: 600px;
+	height: auto;
+	object-fit: cover;
+}
+
+.home header img {
+	max-height: 100vh;
+}
+
+.back {
+	text-decoration: underline;
+}
+
+header::before {
+	content: "";
+	width: 100%;
+	height: 100%;
+	background-color: black;
+	opacity: 0.5;
+	position: absolute;
+}
+
+header .header_content {
+	color: white;
+	z-index: 2;
+	position: absolute;
+	text-align: center;
+}
+
+header .title {
+	font-size: 3.25rem;
+}
+
+/* Main content */
+.grid-container {
+	display: grid;
+	grid-template-columns: auto auto auto auto auto auto;
+}
+
+.grid-item {
+	text-align: center;
+	padding: 20px 0;
+	font-size: 25px;
+}
+
+.grid-item h1 {
+	text-align: center;
+}
+
+.grid-item.gallery {
+	background-color: #a7efc5;
+	padding: 40px 20px;
+	grid-column-start: 1;
+	grid-column-end: 7;
+}
+
+.home .grid-item.gallery {
+	grid-column-start: 1;
+	grid-column-end: 6;
+}
+
+
+.grid-item.gallery .gallery {
+	margin-top: 20px;
+}
+
+.gallery-frame {
+	max-width: 900px;
+	margin: auto;
+}
+
+.caption {
+	color: #606c71 !important;
+	font-size: 1.1rem;
+}
+
+.gallery-frame img{
+	width: 100%;
+	object-fit: contain;
+	height: auto;
+}
+
+
+.grid-item.archive {
+	background-color: white;
+	flex: 1 1 auto;
+	padding: 40px 20px;
 }
 
 div.desc {
-  padding: 15px;
-  text-align: center;
+	padding: 15px;
+	text-align: center;
 }
-</style>
+
+.grid-cards {
+	display: grid;
+	grid-template-columns: auto auto auto;
+	column-gap: 50px;
+}
+
+.grid-cards .desc {
+	font-size: 1.1rem;
+}
+
+@media screen and (max-width: 1024px) {
+	.grid-container { 
+		grid-template-columns: repeat(1, 1fr); 
+	}
+	.gallery-frame {
+		margin-bottom: 10px;
+	}
+	header .title {
+		font-size: 2.25rem;
+		text-align: center;
+		margin-bottom: 15px;
+	}
+	.grid-cards {
+		grid-template-columns: repeat(2, 2fr); 
+	}
+}
+
+@media screen and (max-width: 480px) {
+	.grid-cards {
+		grid-template-columns: repeat(1, 1fr); 
+	}
+}
