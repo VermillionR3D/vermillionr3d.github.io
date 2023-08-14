@@ -72,7 +72,7 @@ header .title {
 
 .grid-item {
 	text-align: center;
-	padding: 20px 0;
+	padding: 40px 20px 60px;
 	font-size: 25px;
 }
 
@@ -82,9 +82,10 @@ header .title {
 
 .grid-item.gallery {
 	background-color: #a7efc5;
-	padding: 40px 20px;
+	
 	grid-column-start: 1;
 	grid-column-end: 7;
+	position: relative;
 }
 
 .home .grid-item.gallery {
@@ -117,7 +118,6 @@ header .title {
 .grid-item.archive {
 	background-color: white;
 	flex: 1 1 auto;
-	padding: 40px 20px;
 }
 
 div.desc {
@@ -133,6 +133,15 @@ div.desc {
 
 .grid-cards .desc {
 	font-size: 1.1rem;
+}
+
+.credit {
+	font-size: 10px;
+	opacity: 0.2;
+	position: absolute;
+	bottom: 15px;
+	text-align: center;
+	width: calc(100% - 40px);
 }
 
 @media screen and (max-width: 1024px) {
